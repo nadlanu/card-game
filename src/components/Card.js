@@ -28,10 +28,10 @@ export class Card extends Component {
 
     render() {
         return (
-            <div className={"flip-card " + ( this.props.correct.includes(this.state.value) ? "correct " : " " ) + ( this.props.clickedList.includes(this.props.kei) || this.props.correctClick.includes(this.props.kei) ? "clicked " : " " )} onClick={this.clicked}>
+            <div className={"flip-card " + ( this.props.correct.includes(this.state.value) ? "correct " : " " ) + ( this.props.clickedList.includes(this.props.kei) || this.props.correctClick.includes(this.props.kei) ? "clicked " : " " ) + (this.props.hints.includes(this.state.value) ? "hint" : "") } onClick={this.clicked}>
             <div className="flip-card-inner">
                 <div className="flip-card-front">
-                    <h1>flip me</h1>
+                    <h1><i class="fas fa-sync"></i></h1>
                 </div>
                 <div className="flip-card-back">
                 <h1>{this.state.value}</h1>
