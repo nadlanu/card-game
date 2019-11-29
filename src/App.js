@@ -193,7 +193,7 @@ export class App extends Component {
 
     let karte = [];
     { for (let index = 0; index < this.state.cards*2; index++) {
-      karte.push(<div className="col-md-2" key={index}>
+      karte.push(<div className="col-md-3" key={index}>
         <Card hints={this.state.hints} correctClick={this.state.correctClick} clickedList={this.state.clickedList} prevKey={this.state.prevKey} kei={index} preValue={this.state.preValue} value={this.state.karte[index]} clicked={this.clicked} correct={this.state.correct}/>
       </div>)
     } }
